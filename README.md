@@ -2,13 +2,19 @@
 
 This is simple "Welcome" application written in C# compiled to self contained executable.
 
-Resulting executable will contain all libraries it depends on and it will not need 
+Resulting executable will contain all libraries it depends on and it will not even need .NET Core to be installed on the machine.
+
+![](screenshot.png)
 
 ## Steps ##
 
 Clone this repository.
 
-To enable building self contained single executable, following settings are needed to be set in **.csproj**.
+```
+git clone https://github.com/zoltraks/welcome-csharp-single.git
+```
+
+To enable building self contained single executable, following settings were set in **.csproj**.
 
 ```xml
 <PublishTrimmed>true</PublishTrimmed>
