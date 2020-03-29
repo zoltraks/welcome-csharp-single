@@ -82,6 +82,8 @@ Warp is an excelent utility that allows creating self-contained single binary ap
 
 https://github.com/dgiagio/warp
 
+Remember not to use ``<PublishTrimmed>`` or ``<PublishSingleFile>`` in your **.csproj** when using warp utility, otherwise you might fail with strange error like *Sequence contains no element*.
+
 ## Extra ##
 
 If you are interested only on one target platform, i.e. 64-bit, you may add this setting to your **.csproj** file.
