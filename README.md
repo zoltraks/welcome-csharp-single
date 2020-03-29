@@ -27,18 +27,6 @@ To enable building self contained single executable, following settings were set
  
  - *PublishReadyToRun* it is supposed to make the start time of our application faster, but in the process it will make the binary heavier.
 
-If ypu want to use publish operation directly from Visual Studio, you will probably need to specify runtime platform in **.csproj** file too.
-
-```xml
-<RuntimeIdentifier>win-x64</RuntimeIdentifier>
-```
-
-If you want to publish for multiple platforms specifiy targets in **RuntimeIdentifiers** option instead.
-
-```xml
-<RuntimeIdentifiers>win-x64;linux-x64;osx-x64</RuntimeIdentifiers>
-```
-
 ## Build ##
 
 ```
