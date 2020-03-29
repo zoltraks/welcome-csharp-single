@@ -27,6 +27,18 @@ To enable building self contained single executable, following settings were set
  
  - *PublishReadyToRun* it is supposed to make the start time of our application faster, but in the process it will make the binary heavier.
 
+If ypu want to use publish operation directly from Visual Studio, you will probably need to specify runtime platform in **.csproj** file too.
+
+```xml
+<RuntimeIdentifier>win-x64</RuntimeIdentifier>
+```
+
+If you want to publish for multiple platforms specifiy targets in **RuntimeIdentifiers** option instead.
+
+```xml
+<RuntimeIdentifiers>win-x64;linux-x64;osx-x64</RuntimeIdentifiers>
+```
+
 ## Build ##
 
 ```
@@ -41,7 +53,7 @@ You might be wondering if it will work for Linux. Yes, it will. :-)
 dotnet publish -r linux-x64 -c Release
 ```
 
-For lightweight distributions like [https://alpinelinux.org/](Alpine) (which is very popular for docker containers) you may want to use **linux-musl-x64**. For other targets read more about RID [https://docs.microsoft.com/en-us/dotnet/core/rid-catalog](here).
+For lightweight distributions like [https://alpinelinux.org/](Alpine) (which is very popular for docker containers) you may want to use **linux-musl-x64**. For other targets read more about RID [here](https://docs.microsoft.com/en-us/dotnet/core/rid-catalog).
 ```
 dotnet publish -r linux-musl-x64 -c Release
 ```
